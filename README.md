@@ -18,6 +18,11 @@ The only hunch we have so far is https://www.linkedin.com/in/anthony-curran-79a7
 > Xilinx MPSoC, Intel/Altera Stratix-10 FPGA<br/>
 > Matlab, C++, System Verilog
 
+### Board markings
+<img src="https://raw.githubusercontent.com/wirebond/nyanritsu_322u17954/docs_update/docs/pics/markings_0.png" width="300">
+<img src="https://raw.githubusercontent.com/wirebond/nyanritsu_322u17954/docs_update/docs/pics/markings_2.png" width="300">
+<img src="https://raw.githubusercontent.com/wirebond/nyanritsu_322u17954/docs_update/docs/pics/markings_1.png" width="300">
+
 ## Main components
 
 - Intel Stratix 10 FPGA (1SG280LU3F50E3XG, 2.75M LEs)
@@ -46,3 +51,16 @@ You can supply the 12V power from a single source by soldering wires to `+12VD` 
 
 The powering-up and rail sequencing procedure is controlled by Linear LTC2977 controller (`D9`, also referred as PSM; bottom side, near backplane connectors). It's powered from a standby rails and won't power up the board, unless there's a 3V3 enable signal coming from the chassis via `"UPM"` connector.
 You can connect `+3.3_PSM` rail (one of the `C1613` terminals, or from `LND246` testpoint) to the enable signal (`A20` pin on `X2` connector).
+
+Soldering point for `+3.3_PSM` rail:<br/>
+<img src="https://raw.githubusercontent.com/wirebond/nyanritsu_322u17954/docs_update/docs/pics/psm_0.png" width="300">
+
+Soldering point for enable signal on the `X2` (`"HM"`) connector:<br/>
+<img src="https://raw.githubusercontent.com/wirebond/nyanritsu_322u17954/docs_update/docs/pics/psm_1.png" width="300">
+
+The board also have `X18` (`"PSM"`) connector to hook up DC1613 USB-to-I2C/SMBus/PMBus Controller from Linear.
+
+## JTAG connectors
+
+For Stratix 10 use `X21` (`"FPGA_JTAG"`) connector.<br/>
+For MPSoC use `X19` (`"PS_JTAG"`) connector. By default, the board is set up to boot MPSoC from the MicroSD card, which is typically not present. You can switch MPSoC boot mode to JTAG using `S1` (`"PS_MODE"`) switch.
