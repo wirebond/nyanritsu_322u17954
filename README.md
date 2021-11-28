@@ -19,9 +19,9 @@ The only hunch we have so far is https://www.linkedin.com/in/anthony-curran-79a7
 > Matlab, C++, System Verilog
 
 ### Board markings
-<img src="https://raw.githubusercontent.com/wirebond/nyanritsu_322u17954/docs_update/docs/pics/markings_0.png" width="300">
-<img src="https://raw.githubusercontent.com/wirebond/nyanritsu_322u17954/docs_update/docs/pics/markings_2.png" width="300">
-<img src="https://raw.githubusercontent.com/wirebond/nyanritsu_322u17954/docs_update/docs/pics/markings_1.png" width="300">
+<img src="https://raw.githubusercontent.com/wirebond/nyanritsu_322u17954/main/docs/pics/markings_0.png" width="300">
+<img src="https://raw.githubusercontent.com/wirebond/nyanritsu_322u17954/main/docs/pics/markings_2.png" width="300">
+<img src="https://raw.githubusercontent.com/wirebond/nyanritsu_322u17954/main/docs/pics/markings_1.png" width="300">
 
 ## Main components
 
@@ -53,10 +53,10 @@ The powering-up and rail sequencing procedure is controlled by Linear LTC2977 co
 You can connect `+3.3_PSM` rail (one of the `C1613` terminals, or from `LND246` testpoint) to the enable signal (`A20` pin on `X2` connector).
 
 Soldering point for `+3.3_PSM` rail:<br/>
-<img src="https://raw.githubusercontent.com/wirebond/nyanritsu_322u17954/docs_update/docs/pics/psm_0.png" width="300">
+<img src="https://raw.githubusercontent.com/wirebond/nyanritsu_322u17954/main/docs/pics/psm_0.png" width="300">
 
 Soldering point for enable signal on the `X2` (`"HM"`) connector:<br/>
-<img src="https://raw.githubusercontent.com/wirebond/nyanritsu_322u17954/docs_update/docs/pics/psm_1.png" width="300">
+<img src="https://raw.githubusercontent.com/wirebond/nyanritsu_322u17954/main/docs/pics/psm_1.png" width="300">
 
 The board also have `X18` (`"PSM"`) connector to hook up DC1613 USB-to-I2C/SMBus/PMBus Controller from Linear.
 
